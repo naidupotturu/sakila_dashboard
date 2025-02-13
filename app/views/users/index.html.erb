@@ -1,0 +1,62 @@
+<h2>Drag and Drop Users</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Active Users</h3>
+    <ul id="active-users" class="list-group bg-success p-2">
+      <% @active_users.each do |user| %>
+        <li class="list-group-item draggable" data-id="<%= user.id %>" draggable="true">
+          <%= user.name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <h3>Inactive Users</h3>
+    <ul id="inactive-users" class="list-group bg-danger p-2">
+      <% @inactive_users.each do |user| %>
+        <li class="list-group-item draggable" data-id="<%= user.id %>" draggable="true">
+          <%= user.name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(".draggable").on("dragstart", function(event) {
+    let userId = $(this).data("id");
+    console.log("Starting drag for user:", userId);
+    event.originalEvent.dataTransfer.setData("userId", userId);
+  });
+
+  $("#active-users, #inactive-users").on("dragover", function(event) {
+    event.preventDefault();
+    console.log("Dragging over:", $(this).attr("id"));
+  });
+
+  $("#active-users, #inactive-users").on("drop", function(event) {
+    event.preventDefault();
+    let userId = event.originalEvent.dataTransfer.getData("userId");
+    console.log("Dropped user:", userId);
+    let newStatus = $(this).attr("id") === "active-users";
+    console.log("New Status:", newStatus);
+
+    $.ajax({
+      url: `/users/${userId}`,
+      method: "PATCH",
+      data: {
+        user: { active: newStatus }
+      },
+      headers: {
+        'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
+      },
+      success: function(response) {
+        location.reload();
+      },
+      error: function(xhr, status, error) {
+        console.error("Error updating user status:", error);
+      }
+    });
+  });
+</script>

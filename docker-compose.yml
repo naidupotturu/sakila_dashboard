@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  db:
+    image: sqlite
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

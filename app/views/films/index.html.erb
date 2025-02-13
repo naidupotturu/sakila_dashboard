@@ -1,0 +1,23 @@
+<h2>Film Dashboard</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Release Year</th>
+    <th>Language</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @films.each do |film| %>
+    <tr>
+      <td><%= film.title %></td>
+      <td><%= film.release_year %></td>
+      <td><%= film.language %></td>
+      <td><%= film.category %></td>
+      <td>$<%= film.rental_price %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
