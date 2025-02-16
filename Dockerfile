@@ -54,4 +54,4 @@ ENTRYPOINT ["/app/bin/docker-entrypoint"]
 
 # Expose the port and start the Rails server
 EXPOSE 3000
-CMD ["bash", "-c", "bin/rails db:migrate && rails server -b '0.0.0.0'"]
+CMD ["bash", "-c", "bin/rails db:migrate && bin/rails db:seed && rails server -b '0.0.0.0'"]
