@@ -23,10 +23,17 @@ RUN yarn install
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+RUN SECRET_KEY_BASE=de7d99c3911e60188f27cc213b5cf19d3a9146703dc8b2940ef60c9639f271aa2db139318c04aafcbab74b8d8aa89910f9e4069f7521bbf31541764493e19160 bundle exec rails assets:precompile
 
 # Final stage for app image
 FROM ruby:3.3
+
+# Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
+ARG RUBY_VERSION=3.3.0
+FROM ruby:$RUBY_VERSION-slim as base
+
+# Rails app lives here
+WORKDIR /app
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \

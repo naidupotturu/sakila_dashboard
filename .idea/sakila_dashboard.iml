@@ -70,12 +70,14 @@
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.15.1, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.13.0, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.6.0, RVM: ruby-3.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="libv8-node (v18.19.0.0, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="logger (v1.6.5, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.24.0, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.8.1, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.4, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, RVM: ruby-3.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_racer (v0.16.0, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.25.4, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.8.0, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mutex_m (v0.3.0, RVM: ruby-3.3.0) [gem]" level="application" />
@@ -125,6 +127,7 @@
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.3, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v2.0.11, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, RVM: ruby-3.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v4.2.1, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.1, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.11, RVM: ruby-3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.7, RVM: ruby-3.3.0) [gem]" level="application" />
