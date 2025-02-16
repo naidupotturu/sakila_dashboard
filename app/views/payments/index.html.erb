@@ -1,0 +1,24 @@
+<h2 class="text-center my-4">💰 Payments List</h2>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th>#</th>
+    <th>User</th>
+    <th>Film</th>
+    <th>Amount ($)</th>
+    <th>Payment Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @payments.each_with_index do |payment, index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= payment.user.name %></td>
+      <td><%= payment.film.title %></td>
+      <td>$<%= payment.amount %></td>
+      <td><%= payment.payment_date.strftime("%Y-%m-%d") %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
