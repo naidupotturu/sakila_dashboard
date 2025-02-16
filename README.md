@@ -24,6 +24,3 @@ Things you may want to cover:
 - rspec spec/requests/users_spec.rb
 - rails s - to start the web server
 - Access in browser 'localhost:3000'
-
-* ...
->>>>>>> 949ceff (Initial commit)
