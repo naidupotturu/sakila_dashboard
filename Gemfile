@@ -24,6 +24,11 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "faker", "~> 3.5"
 
+group :production do
+  gem 'uglifier'
+  gem "sassc-rails", "~> 2.1"
+end
+
 group :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
