@@ -23,6 +23,7 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 gem "faker", "~> 3.5"
+gem 'mini_racer'
 
 group :production do
   gem 'uglifier'
